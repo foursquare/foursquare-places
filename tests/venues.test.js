@@ -36,8 +36,19 @@ describe("venues", () => {
     console.log({ data });
     expect(data.response).toBeTruthy();
   });
+  test("should return trending", async () => {
+    const data = await foursquare.venues.trending(queryParams);
+    console.log({ data });
+    expect(data.response).toBeTruthy();
+  });
   test("should return Venues", async () => {
     const data = await foursquare.venues.getVenues(queryParams);
     expect(data.response.venues).toBeTruthy();
+  });
+  //   hard code venueid here
+  test("should fail without Venue id", async () => {
+    await expect(foursquare.venues.getVenue(queryParams)).rejects.toThrow(
+      "Request failed with status code 400"
+    );
   });
 });
