@@ -56,16 +56,20 @@ describe("venues", () => {
       ll: [40.7128, -74.006].join(","),
       limit: 5
     });
-    console.log({ data });
     await expect(data.response.photos).toBeTruthy();
   });
 
-  // test("should pass with Venue id", async () => {
-  //   const data = await foursquare.venues.getVenue({
-  //     venue_id: "4b748b93f964a52014e32de3",
-  //     ll: [40.7128, -74.006].join(","),
-  //     limit: 5
-  //   });
-  //   await expect(data.response.venue).toBeTruthy();
-  // });
+  test("should pass with Venue tips", async () => {
+    const data = await foursquare.venues.getVenue({
+      venue_id: "4b748b93f964a52014e32de3",
+      ll: [40.7128, -74.006].join(","),
+      limit: 5
+    });
+    await expect(data.response.venue).toBeTruthy();
+  });
+
+  test("should suggest venue names", async () => {
+    const data = await foursquare.venues.suggestCompletion(queryParams);
+    await expect(data.response.minivenues).toBeTruthy();
+  });
 });
