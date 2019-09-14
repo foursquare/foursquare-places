@@ -1,4 +1,5 @@
 import Venues from "./lib/api/venues";
+import Photos from "./lib/api/photos";
 
 export default class Foursquare {
   constructor(
@@ -13,13 +14,20 @@ export default class Foursquare {
       client_secret,
       v: version
     };
-    this.venuesInstances = new Venues(
+    this.venuesInstance = new Venues(
       { credentials, apiUrl, locale },
       "/venues"
+    );
+    this.photosInstance = new Photos(
+      { credentials, apiUrl, locale },
+      "/photos"
     );
   }
 
   get venues() {
-    return this.venuesInstances;
+    return this.venuesInstance;
+  }
+  get photos() {
+    return this.photosInstance;
   }
 }
