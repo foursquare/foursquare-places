@@ -89,4 +89,12 @@ describe("venues", () => {
     });
     expect(data.response.links).toBeTruthy();
   });
+  test("should get similar venues to the one passed in", async () => {
+    const data = await foursquare.venues.getSimilarVenues({
+      venue_id: "4b748b93f964a52014e32de3",
+      ll: [40.7128, -74.006].join(","),
+      limit: 5
+    });
+    expect(data.response.similarVenues).toBeTruthy();
+  });
 });
