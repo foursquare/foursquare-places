@@ -51,4 +51,13 @@ describe("venues", () => {
       "Request failed with status code 400"
     );
   });
+
+  test("should pass with Venue id", async () => {
+    const data = await foursquare.venues.getVenue({
+      venueid: "4b748b93f964a52014e32de3",
+      ll: [40.7128, -74.006].join(","),
+      limit: 5
+    }).response.venue.id;
+    await expect().toBeTruthy();
+  });
 });
