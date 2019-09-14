@@ -58,11 +58,27 @@ describe("venues", () => {
       ll: [40.7128, -74.006].join(","),
       limit: 5
     });
-    await expect(data.response.venue).toBeTruthy();
+    expect(data.response.venue).toBeTruthy();
   });
 
   test("should suggest venue names", async () => {
     const data = await foursquare.venues.suggestCompletion(queryParams);
     await expect(data.response.minivenues).toBeTruthy();
+  });
+  test("should get venue hours", async () => {
+    const data = await foursquare.venues.getVenueHours({
+      venue_id: "4b748b93f964a52014e32de3",
+      ll: [40.7128, -74.006].join(","),
+      limit: 5
+    });
+    expect(data.response.hours).toBeTruthy();
+  });
+  test("should get venue's menu", async () => {
+    const data = await foursquare.venues.getVenueMenu({
+      venue_id: "4b748b93f964a52014e32de3",
+      ll: [40.7128, -74.006].join(","),
+      limit: 5
+    });
+    expect(data.response.menu).toBeTruthy();
   });
 });
