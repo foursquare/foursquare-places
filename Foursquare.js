@@ -1,16 +1,27 @@
-import venuesSingelton from './lib/api/venues'
+import venuesSingelton from "./lib/api/venues";
 
 export default class Foursquare {
-  constructor(clientID, clientSecret, {version = "20171001",  apiUrl = "https://api.foursquare.com/v2",
-  version = "20171001",
-  locale = "en"}) {
-    this.credentials = {clientID, clientSecret, version};
-    this.apiUrl = apiUrl
-    this.locale = locale
+  constructor(
+    clientID,
+    clientSecret,
+    version = "20171001",
+    apiUrl = "https://api.foursquare.com/v2",
+    locale = "en"
+  ) {
+    this.credentials = {
+      client_id: clientID,
+      client_secret: clientSecret,
+      v: version
+    };
+    this.apiUrl = apiUrl;
+    this.locale = locale;
+    this.venuesSingelton = venuesSingelton(
+      { credentials: this.credentials, apiUrl, locale },
+      "/venues"
+    );
   }
 
   venues() {
-    const {credentials, apiUrl, locale} = this
-    venuesSingelton({credentials, apiUrl, locale}, "/venues")
+    return this.venuesSingelton;
   }
 }
