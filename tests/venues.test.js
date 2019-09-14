@@ -97,4 +97,20 @@ describe("venues", () => {
     });
     expect(data.response.similarVenues).toBeTruthy();
   });
+  test("should get venues that people check in after the one passed", async () => {
+    const data = await foursquare.venues.getNextVenues({
+      venue_id: "4b748b93f964a52014e32de3",
+      ll: [40.7128, -74.006].join(","),
+      limit: 5
+    });
+    expect(data.response.nextVenues).toBeTruthy();
+  });
+  test("should get lists that this venue appears on", async () => {
+    const data = await foursquare.venues.getListVenueIsOn({
+      venue_id: "4b748b93f964a52014e32de3",
+      ll: [40.7128, -74.006].join(","),
+      limit: 5
+    });
+    expect(data.response.lists).toBeTruthy();
+  });
 });
