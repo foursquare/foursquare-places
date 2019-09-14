@@ -1,19 +1,12 @@
-import service from "../lib/services/config";
+// import service from "../lib/services/config";
 import venues from "../lib/api/venues";
+import Foursquare from "../Foursquare";
 
 describe("venues", () => {
   // Setup Keys
   require("dotenv").config();
   const { CLIENT_ID, CLIENT_SECRET } = process.env;
-  const config = service.getConfig({
-    clientID: CLIENT_ID,
-    clientSecret: CLIENT_SECRET
-  });
-
-  // instantiate singleton
-  const foursquare = {
-    venues: venues(config)
-  };
+  const foursquare = new Foursquare(CLIENT_ID, CLIENT_SECRET);
 
   // create default queries
 

@@ -21,7 +21,7 @@ export default class Foursquare {
     );
   }
 
-  venues() {
+  get venues() {
     return this.venuesSingelton;
   }
 }
