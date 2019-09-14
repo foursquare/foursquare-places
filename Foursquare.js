@@ -1,4 +1,4 @@
-import venuesSingelton from "./lib/api/venues";
+import Venues from "./lib/api/venues";
 
 export default class Foursquare {
   constructor(
@@ -13,13 +13,13 @@ export default class Foursquare {
       client_secret,
       v: version
     };
-    this.venuesSingelton = venuesSingelton(
+    this.venuesInstances = new Venues(
       { credentials, apiUrl, locale },
       "/venues"
     );
   }
 
   get venues() {
-    return this.venuesSingelton;
+    return this.venuesInstances;
   }
 }
