@@ -33,12 +33,10 @@ describe("venues", () => {
   });
   test("should return recommendations", async () => {
     const data = await foursquare.venues.recommendations(queryParams);
-    console.log({ data });
     expect(data.response).toBeTruthy();
   });
   test("should return trending", async () => {
     const data = await foursquare.venues.trending(queryParams);
-    console.log({ data });
     expect(data.response).toBeTruthy();
   });
   test("should return Venues", async () => {
@@ -52,12 +50,22 @@ describe("venues", () => {
     );
   });
 
-  test("should pass with Venue id", async () => {
-    const data = await foursquare.venues.getVenue({
-      venueid: "4b748b93f964a52014e32de3",
+  test("should get Venue photos", async () => {
+    const data = await foursquare.venues.getVenuePhotos({
+      venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
       limit: 5
-    }).response.venue.id;
-    await expect().toBeTruthy();
+    });
+    console.log({ data });
+    await expect(data.response.photos).toBeTruthy();
   });
+
+  // test("should pass with Venue id", async () => {
+  //   const data = await foursquare.venues.getVenue({
+  //     venue_id: "4b748b93f964a52014e32de3",
+  //     ll: [40.7128, -74.006].join(","),
+  //     limit: 5
+  //   });
+  //   await expect(data.response.venue).toBeTruthy();
+  // });
 });
