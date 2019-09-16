@@ -7,7 +7,8 @@ describe("Foursquare class", () => {
 
   test("should return object with inner credentials obj", () => {
     const FSQ = new Foursquare(CLIENT_ID, CLIENT_SECRET);
-    expect(FSQ.credentials.client_id).toBeTruthy();
-    expect(FSQ.credentials.client_secret).toBeTruthy();
+    expect(FSQ.venues).toBeTruthy();
+    expect(FSQ.photos).toBeTruthy();
+    expect(FSQ.tips).toBeTruthy();
   });
 });
