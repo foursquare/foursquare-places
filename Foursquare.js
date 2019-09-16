@@ -1,5 +1,6 @@
 import Venues from "./lib/api/venues";
 import Photos from "./lib/api/photos";
+import Tips from "./lib/api/tips";
 
 export default class Foursquare {
   constructor(
@@ -22,6 +23,7 @@ export default class Foursquare {
       { credentials, apiUrl, locale },
       "/photos"
     );
+    this.tipsInstance = new Tips({ credentials, apiUrl, locale }, "/tips");
   }
 
   get venues() {
@@ -29,5 +31,8 @@ export default class Foursquare {
   }
   get photos() {
     return this.photosInstance;
+  }
+  get tips() {
+    return this.tipsInstance;
   }
 }
