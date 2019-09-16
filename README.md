@@ -1,6 +1,14 @@
 # Summary
 
-framework agnostic wrapper for foursquare's APIs
+framework agnostic javascript wrapper for foursquare's APIs
+
+## Tests
+
+yarn or npm `yarn test`
+
+## Commit Policy
+
+please test any functions added and put the tests in the `/tests` folder
 
 ## react example
 
