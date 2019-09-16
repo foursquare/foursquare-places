@@ -1,4 +1,3 @@
-import photos from "../lib/api/photos";
 import Foursquare from "../Foursquare";
 
 describe("venues", () => {
