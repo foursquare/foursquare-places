@@ -1,5 +1,4 @@
 // import service from "../lib/services/config";
-import venues from "../lib/api/venues";
 import Foursquare from "../Foursquare";
 
 describe("venues", () => {
