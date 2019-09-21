@@ -34,18 +34,19 @@ Here is a simple react application:
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
+import Foursquare from 'js-foursquare-api'
 
 // need to create an .env file - see instructions in link
 // https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
-var CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-var CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 
-var foursquare = require('react-foursquare')({
+const foursquare = new Foursquare({
   clientID: CLIENT_ID,
   clientSecret: CLIENT_SECRET
 });
 
-var params = {
+const params = {
   "ll": "37.7749,-122.4194",
   "query": 'Blue Bottle'
 };
