@@ -1,7 +1,7 @@
 import Venues from "./lib/api/venues";
 import Photos from "./lib/api/photos";
 import Tips from "./lib/api/tips";
-import List from "./lib/api/lists";
+import Lists from "./lib/api/lists";
 
 export default class Foursquare {
   constructor(
