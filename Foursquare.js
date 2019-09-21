@@ -13,16 +13,30 @@ export default class Foursquare {
       client_secret,
       v: version
     };
-    this.venuesInstance = new Venues(
-      { credentials, apiUrl, locale },
-      "/venues"
-    );
-    this.photosInstance = new Photos(
-      { credentials, apiUrl, locale },
-      "/photos"
-    );
-    this.tipsInstance = new Tips({ credentials, apiUrl, locale }, "/tips");
-    this.listsInstance = new Lists({ credentials, apiUrl, locale }, "/lists");
+    this.venuesInstance = new Venues({
+      credentials,
+      apiUrl,
+      locale,
+      apiFeature: "/venues"
+    });
+    this.photosInstance = new Photos({
+      credentials,
+      apiUrl,
+      locale,
+      apiFeature: "/photos"
+    });
+    this.tipsInstance = new Tips({
+      credentials,
+      apiUrl,
+      locale,
+      apiFeature: "/tips"
+    });
+    this.listsInstance = new Lists({
+      credentials,
+      apiUrl,
+      locale,
+      apiFeature: "/lists"
+    });
   }
 
   get venues() {
