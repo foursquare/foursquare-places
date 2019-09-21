@@ -10,5 +10,6 @@ describe("Foursquare class", () => {
     expect(FSQ.venues).toBeTruthy();
     expect(FSQ.photos).toBeTruthy();
     expect(FSQ.tips).toBeTruthy();
+    expect(FSQ.lists).toBeTruthy();
   });
 });
