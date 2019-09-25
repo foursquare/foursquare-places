@@ -12,6 +12,8 @@ please test any functions added and put the tests in the `/tests` folder
 
 ## react example
 
+*FYI, this example is not functional and will need to be updated once an actual public package is in the npm registry*
+
 Here is a simple react application:
 
 1. Install React
