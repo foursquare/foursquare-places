@@ -41,10 +41,7 @@ import Foursquare from 'js-foursquare-api'
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 
-const foursquare = new Foursquare({
-  clientID: CLIENT_ID,
-  clientSecret: CLIENT_SECRET
-});
+const foursquare = new Foursquare(CLIENT_ID, CLIENT_SECRET);
 
 const params = {
   "ll": "37.7749,-122.4194",
