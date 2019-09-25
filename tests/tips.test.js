@@ -1,4 +1,4 @@
-import Foursquare from "../Foursquare";
+import Foursquare from "../foursquare";
 
 describe("tips", () => {
   // Setup Keys

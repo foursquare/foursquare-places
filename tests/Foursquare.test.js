@@ -1,4 +1,4 @@
-import Foursquare from "../Foursquare";
+import Foursquare from "../foursquare";
 
 describe("Foursquare class", () => {
   // bring in env variables

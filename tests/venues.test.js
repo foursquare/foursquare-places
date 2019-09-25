@@ -1,5 +1,4 @@
-// import service from "../lib/services/config";
-import Foursquare from "../Foursquare";
+import Foursquare from "../foursquare";
 
 describe("venues", () => {
   // Setup Keys
