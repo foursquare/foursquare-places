@@ -2,7 +2,7 @@
   "name": "js-foursquare-api",
   "version": "1.0.0",
   "description": "This is a foursquare library for javascript",
-  "main": "index.js",
+  "main": "foursquare.js",
   "scripts": {
     "test": "jest"
   },
