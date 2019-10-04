@@ -36,7 +36,7 @@ Here is a simple react application:
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import Foursquare from 'js-foursquare-api'
+import Foursquare from 'foursquare-places'
 
 // need to create an .env file - see instructions in link
 // https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
