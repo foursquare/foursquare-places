@@ -1,5 +1,5 @@
 {
-  "name": "js-foursquare-api",
+  "name": "foursquare-places",
   "version": "1.0.0",
   "description": "This is a foursquare library for javascript",
   "main": "foursquare.js",
