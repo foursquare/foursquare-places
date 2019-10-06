@@ -12,7 +12,7 @@ please test any functions added and put the tests in the `/tests` folder
 
 ## react example
 
-*FYI, this example is not functional and will need to be updated once an actual public package is in the npm registry*
+_FYI, this example is not functional and will need to be updated once an actual public package is in the npm registry_
 
 Here is a simple react application:
 
@@ -33,54 +33,43 @@ Here is a simple react application:
 3. Modify your src/App.js
 
 ```
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './App.css';
-import Foursquare from 'foursquare-places'
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Foursquare from "foursquare-places";
 
-// need to create an .env file - see instructions in link
-// https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+const App = props => {
+  const [items, setItems] = useState([]);
 
-const foursquare = new Foursquare(CLIENT_ID, CLIENT_SECRET);
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+  const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
 
-const params = {
-  "ll": "37.7749,-122.4194",
-  "query": 'Blue Bottle'
+  const foursquare = new Foursquare(CLIENT_ID, CLIENT_SECRET);
+
+  const params = {
+    ll: "37.7749,-122.4194",
+    query: "Blue Bottle"
+  };
+
+  useEffect(() => {
+    foursquare.venues.getVenues(params).then(res => {
+      setItems(res.response.venues);
+    });
+  }, [foursquare, params]);
+
+  return (
+    <div>
+      <div>Items:</div>
+      {items.map(item => {
+        return <div key={item.id}>{item.name}</div>;
+      })}
+    </div>
+  );
 };
 
-export default class FoursquareDemo extends Component {
-
-  constructor(props) {
-     super(props);
-     this.state = {
-       items: []
-     };
-   }
-
-  componentDidMount() {
-    foursquare.venues.getVenues(params)
-      .then(res=> {
-        this.setState({ items: res.response.venues });
-      });
-  }
-
-  render() {
-    return (
-    <div>
-        <div>Items:</div>
-        { this.state.items.map(item=> { return <div key={item.id}>{item.name}</div>}) }
-    </div>
-  )
-  }
-}
-
 ReactDOM.render(
-  <FoursquareDemo />,
+  <App />,
   document.getElementById('root')
 );
-
 ```
 
 4. Start your React App
