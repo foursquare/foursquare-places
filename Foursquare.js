@@ -1,6 +1,6 @@
 import { Lists, Tips, Photos, Venues } from "./lib/api";
 
-export default class Foursquare {
+export default class foursquare {
   constructor(
     client_id,
     client_secret,
