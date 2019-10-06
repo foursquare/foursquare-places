@@ -34,7 +34,7 @@ Here is a simple react application:
 
 ```
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import ReactDOM from "react-dom";
 import Foursquare from "foursquare-places";
 
 const App = props => {
@@ -66,10 +66,7 @@ const App = props => {
   );
 };
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 4. Start your React App
