@@ -10,7 +10,7 @@ yarn or npm `yarn test`
 
 please test any functions added and put the tests in the `/tests` folder
 
-## react example
+## React Example
 
 _FYI, this example is not functional and will need to be updated once an actual public package is in the npm registry_
 
