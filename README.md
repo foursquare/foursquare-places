@@ -28,7 +28,7 @@ Here is a simple react application:
 
 `cd MrJitters`
 
-`npm install -i react-foursquare`
+`npm install -i foursquare-places`
 
 3. Modify your src/App.js
 
