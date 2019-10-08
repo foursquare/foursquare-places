@@ -37,7 +37,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Foursquare from "foursquare-places";
 
-const App = props => {
+const App = () => {
   const [items, setItems] = useState([]);
 
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -59,9 +59,9 @@ const App = props => {
   return (
     <div>
       <div>Items:</div>
-      {items.map(item => {
-        return <div key={item.id}>{item.name}</div>;
-      })}
+      {items.map(({ id, name }) => (
+        <div key={id}>{name}</div>
+      ))}
     </div>
   );
 };
