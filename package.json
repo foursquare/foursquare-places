@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/foursquare/js-foursquare-api.git"
+    "url": "git+https://github.com/foursquare/foursquare-places.git"
   },
   "keywords": [
     "react-component",
@@ -26,9 +26,9 @@
   "author": "Jack Dwyer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/foursquare/js-foursquare-api/issues"
+    "url": "https://github.com/foursquare/foursquare-places/issues"
   },
-  "homepage": "https://github.com/foursquare/js-foursquare-api#readme",
+  "homepage": "https://github.com/foursquare/foursquare-places#readme",
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
