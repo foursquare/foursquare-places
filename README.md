@@ -10,7 +10,7 @@ yarn or npm `yarn test`
 
 please test any functions added and put the tests in the `/tests` folder
 
-## react example
+## React Example
 
 _FYI, this example is not functional and will need to be updated once an actual public package is in the npm registry_
 
@@ -28,7 +28,7 @@ Here is a simple react application:
 
 `cd MrJitters`
 
-`npm install -i react-foursquare`
+`npm install -i foursquare-places`
 
 3. Modify your src/App.js
 
