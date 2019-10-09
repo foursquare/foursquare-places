@@ -37,24 +37,23 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Foursquare from "foursquare-places";
 
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
+
+const foursquare = new Foursquare(CLIENT_ID, CLIENT_SECRET);
+
 const App = () => {
   const [items, setItems] = useState([]);
-
-  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
-  const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-
-  const foursquare = new Foursquare(CLIENT_ID, CLIENT_SECRET);
-
-  const params = {
+  const [params, setParams] = useState({
     ll: "37.7749,-122.4194",
     query: "Blue Bottle"
-  };
+  });
 
   useEffect(() => {
     foursquare.venues.getVenues(params).then(res => {
       setItems(res.response.venues);
     });
-  }, [foursquare, params]);
+  }, [params]);
 
   return (
     <div>
