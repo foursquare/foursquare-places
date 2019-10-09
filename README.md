@@ -37,9 +37,10 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Foursquare from "foursquare-places";
 
+// need to create an .env file - see instructions in link
+// https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET;
-
 const foursquare = new Foursquare(CLIENT_ID, CLIENT_SECRET);
 
 const App = () => {
