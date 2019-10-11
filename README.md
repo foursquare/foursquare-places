@@ -16,17 +16,13 @@ _FYI, this example is not functional and will need to be updated once an actual 
 
 Here is a simple react application:
 
-1. Install React
+1. Setup React Project 
 
-`npm install -g create-react-app`
+`npx create-react-app mr-jitters`
 
-2. Create Project
+2. Install Package
 
-`npm install -g create-react-app`
-
-`create-react-app MrJitters`
-
-`cd MrJitters`
+`cd mr-jitters`
 
 `npm install -i foursquare-places`
 
@@ -34,7 +30,6 @@ Here is a simple react application:
 
 ```
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import Foursquare from "foursquare-places";
 
 // need to create an .env file - see instructions in link
@@ -66,7 +61,6 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 4. Start your React App
