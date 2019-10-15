@@ -1,7 +1,7 @@
 {
   "name": "foursquare-places",
   "version": "1.0.0",
-  "description": "This is a foursquare library for javascript",
+  "description": "This is a javascript wrapper for Foursquare's APIs",
   "main": "foursquare.js",
   "scripts": {
     "test": "jest"
@@ -23,7 +23,7 @@
     "fsq",
     "fetch"
   ],
-  "author": "Jack Dwyer",
+  "author": "@dwyfrequency",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/foursquare/foursquare-places/issues"
