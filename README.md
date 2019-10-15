@@ -16,7 +16,7 @@ _FYI, this example is not functional and will need to be updated once an actual 
 
 Here is a simple react application:
 
-1. Setup React Project 
+1. Setup React Project
 
 `npx create-react-app mr-jitters`
 
@@ -30,7 +30,7 @@ Here is a simple react application:
 
 ```
 import React, { useState, useEffect } from "react";
-import Foursquare from "foursquare-places";
+import Foursquare from "@foursquare/foursquare-places";
 
 // need to create an .env file - see instructions in link
 // https://stackoverflow.com/questions/48699820/how-do-i-hide-api-key-in-create-react-app
