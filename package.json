@@ -1,5 +1,5 @@
 {
-  "name": "foursquare-places",
+  "name": "@foursquare/foursquare-places",
   "version": "1.0.0",
   "description": "This is a javascript wrapper for Foursquare's APIs",
   "main": "foursquare.js",
