@@ -1,6 +1,6 @@
 {
   "name": "@foursquare/foursquare-places",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a javascript wrapper for Foursquare's APIs",
   "main": "foursquare.js",
   "scripts": {

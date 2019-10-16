@@ -12,8 +12,6 @@ please test any functions added and put the tests in the `/tests` folder
 
 ## React Example
 
-_FYI, this example is not functional and will need to be updated once an actual public package is in the npm registry_
-
 Here is a simple react application:
 
 1. Setup React Project
@@ -24,9 +22,23 @@ Here is a simple react application:
 
 `cd mr-jitters`
 
-`npm install -i foursquare-places`
+`npm install -i @foursquare/foursquare-places`
 
-3. Modify your src/App.js
+3. Create ./.env file and add CLIENT_ID and CLIENT_SECRET
+
+```
+REACT_APP_CLIENT_ID=InsertClientId
+REACT_APP_CLIENT_SECRET=InsertClientSecret
+```
+
+4. Add Env file to .gitignore
+
+```
+# env
+.env
+```
+
+5. Modify your src/App.js
 
 ```
 import React, { useState, useEffect } from "react";
@@ -64,6 +76,6 @@ const App = () => {
 export default App;
 ```
 
-4. Start your React App
+6. Start your React App
 
 `npm start`
