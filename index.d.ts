@@ -1,5 +1,3 @@
-// declare module "@foursquare/foursquare-places" {}
-
 type Response = Promise<any>;
 
 type RequireOnlyOne<T, Keys extends keyof T = keyof T> = Pick<
