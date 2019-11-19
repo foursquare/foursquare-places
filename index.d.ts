@@ -89,6 +89,24 @@ type VenuesTrendingParams = RequireOnlyOne<
   "ll" | "near"
 >;
 
+interface VenuesSuggestCompletionBaseParams {
+  ll?: string;
+  near?: string;
+  llAcc?: number;
+  alt?: number;
+  altAcc?: number;
+  query: string;
+  limit?: number;
+  radius?: number;
+  sw?: string;
+  ne?: string;
+}
+
+type VenuesSuggestCompletionParams = RequireOnlyOne<
+  VenuesSuggestCompletionBaseParams,
+  "ll" | "near"
+>;
+
 interface VenueId {
   venue_id: string;
 }
@@ -102,7 +120,7 @@ interface Venues {
   getVenue(venueId: VenueId): Response;
   getVenuePhotos(venueId: VenueId): Response;
   getVenueTips(venueId: VenueId): Response;
-  suggestCompletion(params): Response;
+  suggestCompletion(params: VenuesSuggestCompletionParams): Response;
   getVenueHours(venueId: VenueId): Response;
   getVenueMenu(venueId: VenueId): Response;
   getVenueLinks(venueId: VenueId): Response;
