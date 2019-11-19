@@ -78,8 +78,8 @@ type VenuesRecommendationsParams = RequireOnlyOne<
 >;
 
 interface VenuesTrendingBaseParams {
-  ll?: string | null;
-  near?: string | null;
+  ll?: string;
+  near?: string;
   limit?: number;
   radios?: number;
 }
