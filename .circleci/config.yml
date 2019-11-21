@@ -12,7 +12,7 @@ jobs: # a collection of steps
           command: "sudo npm install -g npm@latest"
       - restore_cache: # special step to restore the dependency cache
           # Read about caching dependencies: https://circleci.com/docs/2.0/caching/
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
           name: install-npm-wee
           command: npm install
