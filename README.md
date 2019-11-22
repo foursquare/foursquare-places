@@ -2,6 +2,8 @@
 
 framework agnostic javascript wrapper for foursquare's APIs
 
+[![CircleCI](https://circleci.com/gh/foursquare/foursquare-places/tree/master.svg?style=svg)](https://circleci.com/gh/foursquare/foursquare-places/tree/master)
+
 ## Tests
 
 yarn or npm `yarn test`
