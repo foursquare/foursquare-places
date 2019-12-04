@@ -1,4 +1,4 @@
-import Foursquare from "../foursquare";
+import Foursquare from "../";
 
 describe("venues", () => {
   // Setup Keys
@@ -11,7 +11,7 @@ describe("venues", () => {
   const queryParams = {
     query: "tacos",
     ll: [40.7128, -74.006].join(","),
-    limit: 5
+    limit: 5,
   };
 
   test("should return categories", async () => {
@@ -45,7 +45,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getVenuePhotos({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     await expect(data.response.photos).toBeTruthy();
   });
@@ -54,7 +54,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getVenue({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     expect(data.response.venue).toBeTruthy();
   });
@@ -67,7 +67,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getVenueHours({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     expect(data.response.hours).toBeTruthy();
   });
@@ -75,7 +75,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getVenueMenu({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     expect(data.response.menu).toBeTruthy();
   });
@@ -83,7 +83,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getVenueLinks({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     expect(data.response.links).toBeTruthy();
   });
@@ -91,7 +91,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getSimilarVenues({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     expect(data.response.similarVenues).toBeTruthy();
   });
@@ -99,7 +99,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getNextVenues({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     expect(data.response.nextVenues).toBeTruthy();
   });
@@ -107,7 +107,7 @@ describe("venues", () => {
     const data = await foursquare.venues.getListVenueIsOn({
       venue_id: "4b748b93f964a52014e32de3",
       ll: [40.7128, -74.006].join(","),
-      limit: 5
+      limit: 5,
     });
     expect(data.response.lists).toBeTruthy();
   });

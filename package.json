@@ -2,7 +2,7 @@
   "name": "@foursquare/foursquare-places",
   "version": "1.0.2",
   "description": "This is a javascript wrapper for Foursquare's APIs",
-  "main": "foursquare.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest"
   },
